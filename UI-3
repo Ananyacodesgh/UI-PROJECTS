@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video Player</title>
+
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .video-container {
+            width: 90%;
+            max-width: 700px;
+            background: #222;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+
+        .video-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .video-box {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        /* Responsive video */
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .video-container {
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="video-container">
+        <h2>My Video Player</h2>
+
+        <div class="video-box">
+            <video controls>
+                <!-- Replace "sample.mp4" with your video -->
+                <source src="sample-5s.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>
