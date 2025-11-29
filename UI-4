@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #444);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .player-container {
+            background: #222;
+            padding: 25px;
+            width: 300px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+        }
+
+        .player-container img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+
+        /* Music note animation */
+        .notes {
+            font-size: 25px;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(0); opacity: 1; }
+            50%  { transform: translateY(-10px); opacity: 0.6; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="player-container">
+        <div class="notes"></div>
+        <img src="happy.jpg" alt="Album Cover">
+        
+        <h2>SAMPLE-1</h2>
+        <p>ANANYA THAKUR</p>
+
+        <!-- Audio Player -->
+        <audio controls>
+            <source src="music.mp3.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+
+</body>
+</html>
